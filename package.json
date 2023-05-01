@@ -1,10 +1,11 @@
 {
-  "name": "learn-wp",
+  "name": "pretty-paw",
   "version": "1.2.2",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack serve",
+    "webp": "node webp-convert.mjs",
     "build-dev": "webpack",
     "build-prod": "webpack --node-env=production",
     "clear": "rd /s /q dist"
@@ -18,8 +19,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@babel/core": "^7.21.4",
-    "@babel/preset-env": "^7.21.4",
+    "@babel/core": "^7.21.5",
+    "@babel/preset-env": "^7.21.5",
     "babel-loader": "^9.1.2",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.3",
@@ -27,9 +28,11 @@
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.1",
     "image-webpack-loader": "^8.1.0",
+    "imagemin": "^8.0.1",
+    "imagemin-webp": "^8.0.0",
     "mini-css-extract-plugin": "^2.7.5",
     "postcss": "^8.4.23",
-    "postcss-loader": "^7.2.4",
+    "postcss-loader": "^7.3.0",
     "postcss-preset-env": "^8.3.2",
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.62.1",
