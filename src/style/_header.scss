@@ -1,0 +1,26 @@
+.header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 24px 0;
+    z-index: 50;
+    background-color: $black;
+    color: $white;
+    @include lg {
+        padding: 30px 0;
+    }
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo {
+        width: 200px;
+        @include lg {
+            width: 360px;
+        }
+    }
+}
+
+

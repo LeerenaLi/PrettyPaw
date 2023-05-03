@@ -1,0 +1,89 @@
+.footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @include lg {
+        padding-top: 60px;
+        padding-bottom: 50px;
+    }
+    &__container { 
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 32px;
+        grid-template-areas: 
+        'logo'
+        'social'
+        'devlopers'
+        'copyright';
+        @include sm {
+            grid-template-columns: auto auto;
+            row-gap: 40px;
+            justify-content: space-between;
+            grid-template-areas: 
+            'logo social'
+            'copyright devlopers';
+        }
+        @include lg {
+            row-gap: 76px;
+        }
+    }
+    &__logo {
+        grid-area: logo;
+        max-width: 200px;
+        @include lg {
+            max-width: 360px;
+        }
+    }
+    &__social-list {
+        grid-area: social;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        @include lg {
+            gap: 36px;
+        }
+    }
+    &__social-link svg {
+        width: 36px;
+        height: 36px;
+        @include lg {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    &__social-link_yt {
+        &:hover {
+            color: #cd201f;
+        }
+    }
+    &__social-link_tg {
+        &:hover {
+            color: #0088cc;
+        }
+    }
+    &__developers {
+        grid-area: devlopers;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        line-height: 1;
+        @include sm {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        @include lg {
+            font-size: 20px;
+        }
+    }
+    &__developer {
+        margin-bottom: 19px;
+        @include lg {
+            margin-bottom: 16px;
+        }
+    }
+    &__developer:last-child {
+        margin-bottom: 0;
+    }
+    &__copyright {
+        grid-area: copyright;
+        line-height: 1;
+    }
+}

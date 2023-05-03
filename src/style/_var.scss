@@ -3,5 +3,35 @@ $black: #000000;
 $white: #FFFFFF;
 $gray: #C2C2C2;
 
+@mixin sm {
+    @media (min-width: 576px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: 768px) {
+        @content;
+    }    
+}
+
+@mixin lg {
+    @media (min-width: 1024px) {
+        @content;
+    }    
+}
+
+@mixin xl {
+    @media (min-width: 1240px) {
+        @content;
+    }    
+}
+
+@mixin xxl {
+    @media (min-width: 1600px) {
+        @content;
+    }    
+}
+
 
 
