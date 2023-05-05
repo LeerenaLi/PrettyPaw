@@ -13,6 +13,49 @@ slidersInit('.about__slider', {
 
 
 
+slidersInit('.career__slider', {
+    pagination: {
+        el: '.career__slider-pagination',
+    },
+    breakpoints: {
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 19
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 26
+        },
+        1240: {
+          slidesPerView: 4,
+          spaceBetween: 30
+        }
+    }
+});
+
+const slide = document.querySelectorAll('.swiper-slide');
+
+
+    
+slide.forEach(item => {
+    const index = item.dataset.swiperSlideIndex;
+    console.log('index: ', index);
+
+    let evenIndex;
+    let oddIndex;
+    
+    if (index % 2 === 0) {
+        evenIndex = index;
+        item.classList.add('career__image-item_even');
+    } else {
+    oddIndex = index;
+    item.classList.add('career__image-item_odd');
+    }
+
+})
+
+
+
 const videoBG = document.querySelector('.video-bg');
 
 videoBG.innerHTML = `

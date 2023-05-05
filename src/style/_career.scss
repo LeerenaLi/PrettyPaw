@@ -1,0 +1,100 @@
+.career {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    &__content {
+        margin-bottom: 40px;
+        @include md {
+            display: grid;
+            grid-template-columns: 1fr min-content;
+            grid-template-areas: 
+            'title link'
+            'description .';
+            gap: 24px 21px;
+        }
+        @include lg {
+            margin-bottom: 50px;
+            gap: 40px 31px;
+        }
+        @include lg {
+            grid-template-columns: 690px min-content;
+            justify-content: space-between;
+        }
+    }
+    &__title {
+        font-weight: 1000;
+        font-size: 32px;
+        line-height: 1;
+        text-transform: uppercase;
+        color: $white;
+        margin-bottom: 24px;
+        @include md {
+            grid-area: title;
+            margin-bottom: 0;
+        }
+        @include lg {
+            font-size: 52px;
+        }
+    }
+    &__description {
+        font-weight: 300;
+        font-size: 16px;
+        margin-bottom: 24px;
+        @include md {
+            grid-area: description;
+            margin-bottom: 0;
+        }
+        @include lg {
+            font-size: 20px;
+        }
+    }
+    &__link {
+        @include md {
+            grid-area: link;
+            align-self: start;
+        }
+    }
+    &__image {
+        border-radius: 16px;
+        &-item {
+            &_even {
+                @include md {
+                    width: 244px!important;
+                    height: 244px!important;
+                }
+                @include lg {
+                    width: 333px!important;
+                    height: 333px!important;
+                }
+                @include xl {
+                    width: 379px!important;
+                    height: 379px!important;
+                }
+            }
+            &_odd {
+                @include md {
+                    padding-top: 34px;
+                    width: 177px!important;
+                    height: 177px!important;
+                }
+                @include lg {
+                    padding-top: 47px;
+                    width: 242px!important;
+                    height: 242px!important;
+                }
+                @include xl {
+                    padding-top: 53px;
+                    width: 275px!important;
+                    height: 275px!important;
+                }
+            }
+        }
+    }
+    &__slider {
+        &-pagination {
+            @include md {
+                display: none;
+            }
+        }
+    }
+}
+
