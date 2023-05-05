@@ -33,7 +33,7 @@ slidersInit('.career__slider', {
     }
 });
 
-const slide = document.querySelectorAll('.swiper-slide');
+const slide = document.querySelectorAll('.career__image-item');
 
 
     
