@@ -1,6 +1,8 @@
 .location {
-
+    position: relative;
     &__list {
+        position: relative;
+        z-index: 10;
         @include lg {
             display: flex;
             min-height: 552px;
@@ -16,7 +18,6 @@
             margin: 0 auto;
         }
     }
-
     &__item {
         position: relative;
         padding: 50px 16px;
@@ -60,6 +61,9 @@
             inset: 0;
             background-size: cover;
             background-position: center;
+            @include lg {
+                background-image: none;
+            }
         }
         &_mammals::before {
             background-image: 
@@ -78,12 +82,7 @@
                 url('../img/mammals_tablet.webp') 1x,
                 url('../img/mammals_tablet.jpg') 1x);
             }
-            @include lg {
-                background-image: 
-                url('../img/mammals_laptop.jpg');
-            }
         }
-
         &_birds::before {
             background-image: 
                 url('../img/birds.jpg');
@@ -101,12 +100,7 @@
                 url('../img/birds_tablet.webp') 1x,
                 url('../img/birds_tablet.jpg') 1x);
             }
-            @include lg {
-                background-image: 
-                url('../img/birds_laptop.jpg');
-            }
         }
-
         &_reptiles::before {
             background-image: 
                 url('../img/reptiles.jpg');
@@ -123,13 +117,8 @@
                 url('../img/reptiles_tablet_2x.jpg') 2x,
                 url('../img/reptiles_tablet.webp') 1x,
                 url('../img/reptiles_tablet.jpg') 1x);
-            }
-            @include lg {
-                background-image: 
-                url('../img/reptiles_laptop.jpg');
-            }  
+            } 
         }
-
         &_water::before {
             background-image: 
                 url('../img/water.jpg');
@@ -147,12 +136,7 @@
                 url('../img/water_tablet.webp') 1x,
                 url('../img/water_tablet.jpg') 1x);
             }
-            @include lg {
-                background-image: 
-                url('../img/water_laptop.jpg');
-            }
         }
-
         &_insects::before {
             background-image: 
                 url('../img/insects.jpg');
@@ -169,10 +153,6 @@
                 url('../img/insects_tablet_2x.jpg') 2x,
                 url('../img/insects_tablet.webp') 1x,
                 url('../img/insects_tablet.jpg') 1x);
-            }
-            @include lg {
-                background-image: 
-                url('../img/insects_laptop.jpg');
             }
         }
     }
@@ -202,6 +182,12 @@
         color: $white;
         @include lg {
             display: none;
+        }
+    }
+    &__video-bg {
+        display: none;
+        @include lg {
+            display: block;
         }
     }
 }

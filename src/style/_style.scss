@@ -75,10 +75,11 @@ iframe {
     height: 100%;
     object-fit: cover;
     @include xxl {
-        left: 50%;
-        transform: translateX(-50%);
-        width: 2680px;
+        max-width: 2560px;
         margin: 0 auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 
