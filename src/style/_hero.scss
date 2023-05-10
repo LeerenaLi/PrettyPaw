@@ -31,6 +31,8 @@
             url('../img/poster-xl-4x.webp') 4x,
             url('../img/poster-xl-4x.jpg') 4x
         );
+        background-size: 2680px;
+        background-repeat: no-repeat;
     }
     &__container {
         position: relative;
@@ -79,6 +81,11 @@
         z-index: 9;
         inset: 0;
         background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 35.38%, #000000 100%);
+        @include xxl {
+            width: 2680px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
     &__video-bg {
         z-index: 8;

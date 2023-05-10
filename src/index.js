@@ -19,41 +19,23 @@ slidersInit('.career__slider', {
     },
     breakpoints: {
         768: {
-          slidesPerView: 3,
-          spaceBetween: 19
+          slidesPerView: 'auto',
+          spaceBetween: 20,
         },
         1024: {
-          slidesPerView: 3,
-          spaceBetween: 26
+          slidesPerView: 'auto',
+          spaceBetween: 26,
         },
         1240: {
-          slidesPerView: 4,
-          spaceBetween: 30
-        }
+          slidesPerView: 'auto',
+          spaceBetween: 30,
+        },
+        1600: {
+          slidesPerView: 'auto',
+          spaceBetween: 30,
+        },
     }
 });
-
-const slide = document.querySelectorAll('.career__image-item');
-
-
-    
-slide.forEach(item => {
-    const index = item.dataset.swiperSlideIndex;
-    console.log('index: ', index);
-
-    let evenIndex;
-    let oddIndex;
-    
-    if (index % 2 === 0) {
-        evenIndex = index;
-        item.classList.add('career__image-item_even');
-    } else {
-    oddIndex = index;
-    item.classList.add('career__image-item_odd');
-    }
-
-})
-
 
 
 const videoBG = document.querySelector('.video-bg');

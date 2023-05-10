@@ -1,10 +1,18 @@
 .career {
     padding-top: 80px;
     padding-bottom: 60px;
+    @include md {
+        padding-bottom: 40px;
+    }
+    @include lg {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
     &__content {
         margin-bottom: 40px;
         @include md {
             display: grid;
+            justify-content: space-between;
             grid-template-columns: 1fr min-content;
             grid-template-areas: 
             'title link'
@@ -12,12 +20,12 @@
             gap: 24px 21px;
         }
         @include lg {
-            margin-bottom: 50px;
-            gap: 40px 31px;
+            margin-bottom: 50px; 
+            grid-template-columns: 720px min-content;
+            gap: 40px;
         }
-        @include lg {
+        @include xl {
             grid-template-columns: 690px min-content;
-            justify-content: space-between;
         }
     }
     &__title {
@@ -36,8 +44,6 @@
         }
     }
     &__description {
-        font-weight: 300;
-        font-size: 16px;
         margin-bottom: 24px;
         @include md {
             grid-area: description;
@@ -55,45 +61,31 @@
     }
     &__image {
         border-radius: 16px;
+        &-list {
+            align-items: center;
+        }
         &-item {
-            &_even {
-                @include md {
-                    width: 244px!important;
-                    height: 244px!important;
+            @include md {
+                &:nth-child(odd) {
+                    width: 34%;
                 }
-                @include lg {
-                    width: 333px!important;
-                    height: 333px!important;
-                }
-                @include xl {
-                    width: 379px!important;
-                    height: 379px!important;
+                &:nth-child(even) {
+                    width: 25%;
                 }
             }
-            &_odd {
-                @include md {
-                    padding-top: 34px;
-                    width: 177px!important;
-                    height: 177px!important;
+            @include xl {
+                &:nth-child(odd) {
+                    width: 27%;
                 }
-                @include lg {
-                    padding-top: 47px;
-                    width: 242px!important;
-                    height: 242px!important;
-                }
-                @include xl {
-                    padding-top: 53px;
-                    width: 275px!important;
-                    height: 275px!important;
+                &:nth-child(even) {
+                    width: 19%;
                 }
             }
         }
     }
-    &__slider {
-        &-pagination {
-            @include md {
-                display: none;
-            }
+    &__slider-pagination {
+        @include md {
+            display: none;
         }
     }
 }

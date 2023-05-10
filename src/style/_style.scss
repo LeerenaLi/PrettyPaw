@@ -74,6 +74,12 @@ iframe {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    @include xxl {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2680px;
+        margin: 0 auto;
+    }
 }
 
 .container {
@@ -94,6 +100,7 @@ iframe {
     }
     @include xxl {
         min-width: 1540px;
+        max-width: 2680px;
         padding-left: 60px;
         padding-right: 60px;
         margin: 0 auto;

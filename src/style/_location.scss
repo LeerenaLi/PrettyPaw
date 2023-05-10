@@ -31,7 +31,7 @@
             flex:  0 0 calc(100% / 5);
             padding: 0;
         }
-        &::after {
+        &:not(:last-child):after {
             content: '';
             position: absolute;
             z-index: 5;
