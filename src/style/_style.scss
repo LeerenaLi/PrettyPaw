@@ -126,6 +126,26 @@ iframe {
         height: 16px;
         background: url('../img/arrow-right.svg') center/contain no-repeat;
     }
+    &:hover {
+        color: $black;
+        &::after {
+            background: url('../img/arrow-right-black.svg') center/contain no-repeat;
+        }
+    }
+    &:focus {
+        color: $yellow;
+        background: url('../img/arrow-right.svg') center/contain no-repeat;
+        outline: 1px solid $black;
+        color: $yellow;
+        background: $white;
+    }
+    &:disabled {
+        color: #C2C2C2;
+        border: 1px solid #C2C2C2;
+        &::after {
+            background: url('../img/arrow-right-gray.svg') center/contain no-repeat;
+        }
+    }
     @include lg {
         padding: 15px 32px;
         font-size: 20px;

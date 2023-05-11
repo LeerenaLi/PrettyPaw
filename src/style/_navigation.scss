@@ -52,6 +52,17 @@
             border: 2px solid $yellow;
             background: transparent;
             border-radius: 80px;
+            &:hover {
+                color: $yellow;
+            }
+            &:focus {
+                color: $white;
+                background: $yellow;
+            }
+            &:disabled {
+                border-color: #C2C2C2;
+                color: #C2C2C2;
+            }
             &_active {
                 color: $white;
                 background: $yellow;
