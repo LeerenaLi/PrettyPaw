@@ -41,6 +41,15 @@
         line-height: 1;
         padding: 20px 0;
         white-space: nowrap;
+        outline: 2px solid transparent;
+        outline-offset: 5px;
+        padding: 0 5px;
+        &:focus:not(:hover) {
+            outline-color: $yellow;
+        }
+        &:hover {
+            color: $yellow;
+        }
         &_active {
             color: $yellow;
             pointer-events: none;
@@ -52,10 +61,11 @@
             border: 2px solid $yellow;
             background: transparent;
             border-radius: 80px;
+            outline: none;
             &:hover {
                 color: $yellow;
             }
-            &:focus {
+            &:focus:not(:hover) {
                 color: $white;
                 background: $yellow;
             }

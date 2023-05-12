@@ -3,11 +3,28 @@
     &__list {
         position: relative;
         z-index: 10;
+        --opacity: 0;
+        --background-image: none;
         @include lg {
             display: flex;
             min-height: 552px;
             justify-content: space-between;
-            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+            &::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                z-index: -1;
+                background-position: center;
+                background-size: cover;
+                opacity: var(--opacity);
+                background-image: var(--background-image);
+            }
         }
         @include xl {
             min-height: 780px;
@@ -29,7 +46,7 @@
         }
         @include lg {
             background-image: none;
-            flex:  0 0 calc(100% / 5);
+            width: 20%;
             padding: 0;
         }
         &:not(:last-child):after {
@@ -156,6 +173,15 @@
             }
         }
     }
+    &__content {
+        @include lg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: rotate(-90deg) translate(-50%, -50%);
+            transform-origin: top left;
+        }
+    }
     &__title {
         white-space: nowrap;
         font-weight: 1000;
@@ -165,16 +191,14 @@
         color: $yellow;
         margin-bottom: 16px;
         @include lg {
-            position: absolute;
-            margin-bottom: 0;
-            top: 50%;
-            left: 50%;
-            transform: rotate(-90deg) translate(-50%, -50%);
-            transform-origin: top left;
             color: $white;
+            margin-bottom: 0;
+            text-align: center;
+            padding: 0 20px;
         }
         @include xl {
             font-size: 32px;
+            padding: 0 30px;
         }
     }
     &__dscription {
@@ -182,6 +206,12 @@
         color: $white;
         @include lg {
             display: none;
+            font-size: 16px;
+            text-align: center;
+            padding: 0 20px;
+        }
+        @include xl {
+            padding: 0 30px;
         }
     }
     &__video-bg {
