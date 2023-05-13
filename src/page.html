@@ -19,16 +19,16 @@
                         <a href="/index.html" class="navigation__link navigation__link_active">Главная</a>
                     </li>
                     <li class="navigation__item">
-                        <a href="#about" class="navigation__link">О&nbsp;зоосаде</a>
+                        <a href="page.html#about" class="navigation__link">О&nbsp;зоосаде</a>
                     </li>
                     <li class="navigation__item">
-                        <a href="#history" class="navigation__link">История</a>
+                        <a href="page.html#history" class="navigation__link">История</a>
                     </li>
                     <li class="navigation__item">
-                        <a href="#deeds" class="navigation__link">Добрые&nbsp;дела</a>
+                        <a href="page.html#deeds" class="navigation__link">Добрые&nbsp;дела</a>
                     </li>
                     <li class="navigation__item">
-                        <a href="#career" class="navigation__link">Карьера</a>
+                        <a href="page.html#career" class="navigation__link">Карьера</a>
                     </li>
                 </ul>
 
@@ -38,8 +38,101 @@
     </header>
 
     <main>
-        <section class="page-nav"></section>
-        <section class="page"></section>
+        <section class="page-nav">
+            <ul class="page-nav__list">
+                <li class="page-nav__item">
+                    <a href="page.html#about" class="page-nav__link">О&nbsp;зоопарке</a>
+                </li>
+                <li class="page-nav__item">
+                    <a href="page.html#history" class="page-nav__link">История</a>
+                </li>
+                <li class="page-nav__item">
+                    <a href="page.html#deeds" class="page-nav__link">Добрые&nbsp;дела</a>
+                </li>
+                <li class="page-nav__item">
+                    <a href="page.html#cereer" class="page-nav__link page-nav__link_active">Карьера</a>
+                </li>
+            </ul>
+        </section>
+        <section class="page" id="career">
+            <div class="page__container">
+                <h1 class="page__title">Карьера</h1>
+
+                <div class="page__text-block">
+                    <p class="page__text">Карьера в&nbsp;нашей компании может предоставить много интересных и&nbsp;перспективных возможностей для людей, увлеченных животными и&nbsp;желающих развиваться в&nbsp;этой области.</p>
+                    <p class="page__text">У&nbsp;нас есть возможности для трудоустройства в&nbsp;различных должностях, начиная от&nbsp;сотрудников магазина, где можно работать с&nbsp;клиентами и&nbsp;продавать товары для животных, до&nbsp;ветеринарных врачей и&nbsp;специалистов по&nbsp;уходу за&nbsp;животными в&nbsp;груминг-салонах. Также в&nbsp;компании есть возможности для работы в&nbsp;отделе маркетинга, управления персоналом и&nbsp;различных других сферах.</p>
+                </div>
+
+                <figure class="page__image-block">
+                    <picture class="page__image-wrapper">
+                        <source srcset="img/dog_desktop.webp" type="image/webp" media="(min-width: 1440px)">
+                        <source srcset="img/dog_desktop.jpg" media="(min-width: 1440px)">
+
+                        <source srcset="img/dog_laptop.webp" type="image/webp" media="(min-width: 1024px)">
+                        <source srcset="img/dog_laptop.jpg" media="(min-width: 1024px)">
+
+                        <source srcset="img/dog_tablet.webp" type="image/webp" media="(min-width: 768px)">
+                        <source srcset="img/dog_tablet.jpg" media="(min-width: 768px)">
+
+                        <source srcset="img/dog.webp" type="image/webp">
+                        <img src="img/dog.jpg" alt="собака пьет молоко" class="page__image">
+                    </picture>
+                </figure>
+
+                <div class="page__text-block">
+                    <p class="page__text">Компания предоставляет своим сотрудникам возможность профессионального роста и&nbsp;развития, проводя регулярные тренинги и&nbsp;курсы повышения квалификации. Кроме того, компания заботится о&nbsp;своих сотрудниках и&nbsp;предлагает им&nbsp;конкурентную заработную плату, социальные льготы, гибкий график работы и&nbsp;возможность работать удаленно.</p>
+                </div>
+
+                <figure class="page__image-block page__image-block_double">
+                    <picture class="page__image-wrapper">
+                        <source srcset="img/people_desktop.webp" type="image/webp" media="(min-width: 1440px)">
+                        <source srcset="img/people_desktop.jpg" media="(min-width: 1440px)">
+
+                        <source srcset="img/people_laptop.webp" type="image/webp" media="(min-width: 1024px)">
+                        <source srcset="img/people_laptop.jpg" media="(min-width: 1024px)">
+
+                        <source srcset="img/people_tablet.webp" type="image/webp" media="(min-width: 768px)">
+                        <source srcset="img/people_tablet.jpg" media="(min-width: 768px)">
+
+                        <source srcset="img/people.webp" type="image/webp">
+                        <img src="img/people.jpg" alt="сотрудники в аудитории" class="page__image">
+                    </picture>
+
+                    <picture class="page__image-wrapper">
+                        <source srcset="img/hand_desktop.webp" type="image/webp" media="(min-width: 1440px)">
+                        <source srcset="img/hand_desktop.jpg" media="(min-width: 1440px)">
+
+                        <source srcset="img/hand_laptop.webp" type="image/webp" media="(min-width: 1024px)">
+                        <source srcset="img/hand_laptop.jpg" media="(min-width: 1024px)">
+
+                        <source srcset="img/hand.webp" type="image/webp">
+                        <img src="img/hand.jpg" alt="поднятая рука" class="page__image">
+                    </picture>
+                </figure>
+
+                <div class="page__text-block">
+                    <p class="page__text">Чтобы начать у&nbsp;нас карьеру, желательно иметь опыт работы с&nbsp;животными или образование в&nbsp;соответствующей области, такой как ветеринарная медицина или зоотехника. Но&nbsp;даже если у&nbsp;вас нет такого опыта или образования, вы&nbsp;можете получить его, работая в&nbsp;компании и&nbsp;проходя обучение на&nbsp;месте.</p>
+                </div>
+
+                <figure class="page__image-block">
+                    <picture class="page__image-wrapper">
+                        <source srcset="img/girl_desktop.webp" type="image/webp" media="(min-width: 1440px)">
+                        <source srcset="img/girl_desktop.jpg" media="(min-width: 1440px)">
+
+                        <source srcset="img/girl_laptop.webp" type="image/webp" media="(min-width: 1024px)">
+                        <source srcset="img/girl_laptop.jpg" media="(min-width: 1024px)">
+
+                        <source srcset="img/girl_tablet.webp" type="image/webp" media="(min-width: 768px)">
+                        <source srcset="img/girl_tablet.jpg" media="(min-width: 768px)">
+
+                        <source srcset="img/girl.webp" type="image/webp">
+                        <img src="img/girl.jpg" alt="девушка улыбается" class="page__image">
+                    </picture>
+                </figure>
+
+                <a href="https://hh.ru" class="page__link link-main" target="_blank">Вакансии</a>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">

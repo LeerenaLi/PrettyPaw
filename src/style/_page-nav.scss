@@ -1,0 +1,32 @@
+.page-nav {
+    display: none;
+    @include lg {
+        display: block;
+        position: fixed;
+        top: 216px;
+        left: 32px;
+    }
+    @include xl {
+        left: 30px;
+    }
+    &__list {
+        @include lg {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            line-height: 1;
+            font-weight: 1000;
+            font-size: 16px;
+            color: $white;
+        }
+    }
+    &__link {
+        &:hover {
+            color: $black;
+        }
+        &_active {
+            color: $black;
+            pointer-events: none;
+        }
+    }
+}

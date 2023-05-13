@@ -23,12 +23,11 @@ export const menuControl = () => {
     }
 
     const closeMenu = () => {
+        navigationBtn.classList.remove('navigation__button_active');
         timeLine.reverse();
     }
 
-    timeLine.eventCallback('onReverseComplete', () => {
-        navigationBtn.classList.remove('navigation__button_active');
-    })
+    
 
     
     navigationBtn.addEventListener('click', () => {
@@ -54,6 +53,7 @@ export const menuControl = () => {
                 gsap.set(elem, { opacity: 0, x: x, duration: 1 });
             });
         }
+        
     }
 
     const mediaGuery = window.matchMedia('(min-width: 1240px)');

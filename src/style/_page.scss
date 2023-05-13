@@ -1,0 +1,90 @@
+.page {
+    padding-top: 120px;
+    padding-bottom: 40px;
+    @include lg {
+        padding-top: 216px;
+        padding-bottom: 100px;
+        display: flex;
+        justify-content: flex-end; 
+    }
+    @include xl {
+        justify-content: center;
+    }
+    &__container {
+        padding: 0 16px;
+        @include md {
+            padding: 0 32px;    
+        }
+        @include lg {
+            max-width: 864px;
+        }
+        @include xl {
+            max-width: 984px;
+        }
+    }
+    &__title {
+        font-weight: 1000;
+        font-size: 32px;
+        line-height: 1;
+        color: $white;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+        @include lg {
+            font-size: 52px;
+            margin-bottom: 40px;  
+        }
+    }
+    &__text-block {
+        margin-bottom: 40px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @include lg {
+            margin-bottom: 60px;
+        }
+    }
+    &__text {
+        margin-bottom: 16px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @include lg {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    }
+    &__image-block {
+        margin-bottom: 40px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @include lg {
+            margin-bottom: 60px;
+        }
+        &_double {
+            .page__image-wrapper:last-child {
+                display: none;
+                @include md {
+                    display: block;
+                }
+            }
+            @include md {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 18px;
+            }
+            @include lg {
+                gap: 20px;
+            }
+            @include xl {
+                gap: 30px;
+            }
+        }
+    }
+    &__image {
+        object-fit: cover;
+        border-radius: 16px;
+        flex-grow: 1;
+    }
+}
