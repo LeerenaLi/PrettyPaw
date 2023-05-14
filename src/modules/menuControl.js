@@ -27,15 +27,16 @@ export const menuControl = () => {
         navigationBtn.classList.remove('navigation__button_active');
         timeLine.reverse();
     }
-
-    navigationLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            if (e.target.closest('.navigation__item')) {
-                closeMenu();
-            }
-        })
-    })
-
+   
+    if (window.matchMedia('(max-width: 1239px)').matches) {
+        navigationLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (e.target.closest('.navigation__item')) {
+                    closeMenu();
+                }
+            })
+        });
+    };
     
     navigationBtn.addEventListener('click', () => {
         if (navigationBtn.classList.contains('navigation__button_active')) {

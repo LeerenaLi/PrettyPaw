@@ -43,11 +43,12 @@
         outline: 2px solid transparent;
         outline-offset: 5px;
         padding: 20px 40px;
-        &:focus:not(:hover) {
-            outline-color: $yellow;
-        }
+        
         &:hover {
             color: $yellow;
+        }
+        &:focus:not(:hover) {
+            outline-color: $yellow;
         }
         &_active {
             color: $yellow;
