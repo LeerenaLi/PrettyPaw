@@ -27,22 +27,6 @@ export const menuControl = () => {
         navigationBtn.classList.remove('navigation__button_active');
         timeLine.reverse();
     }
-   
-    // if (window.matchMedia('(max-width: 1239px)').matches) {
-    //     navigationLinks.forEach(link => {
-    //         link.addEventListener('click', (e) => {
-    //             if (e.target.closest('.navigation__item')) {
-    //                 closeMenu();
-    //             }
-    //         })
-    //     });
-    // };
-
-    navigationList.addEventListener('click', ({target}) => {
-        if (target.closest('.navigation__link') && window.matchMedia('(max-width: 1239px)').matches) {
-            closeMenu();
-        }
-    });
     
     navigationBtn.addEventListener('click', () => {
         if (navigationBtn.classList.contains('navigation__button_active')) {
@@ -77,4 +61,10 @@ export const menuControl = () => {
 
     mediaGuery.addEventListener('change', checkScreenSize);
     checkScreenSize(mediaGuery);
+
+    navigationList.addEventListener('click', ({target}) => {
+        if (target.closest('.navigation__link') && !mediaGuery.matches) {
+            closeMenu();
+        }
+    });
 }
