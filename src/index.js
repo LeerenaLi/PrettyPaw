@@ -8,10 +8,14 @@ import { slidersInit } from './modules/sliders';
 import { videoBgInit } from './modules/videoBg';
 import { menuControl } from './modules/menuControl';
 import { locationHover } from './modules/locationHover';
+import { pageControllInit } from './modules/pageControl';
+import { initScrollTopButton } from './modules/scrollTopButton';
 
 videoBgInit();
 menuControl();
 locationHover();
+initScrollTopButton('arrow-top');
+pageControllInit();
 
 slidersInit('.about__slider', {
     pagination: {

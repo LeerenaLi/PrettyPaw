@@ -21,11 +21,8 @@
         }
         @include lg {
             margin-bottom: 50px; 
-            grid-template-columns: 720px min-content;
-            gap: 40px;
-        }
-        @include xl {
             grid-template-columns: 690px min-content;
+            gap: 40px;
         }
     }
     &__title {

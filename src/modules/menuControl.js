@@ -4,6 +4,7 @@ export const menuControl = () => {
     const navigationBtn = document.querySelector('.navigation__button');
     const navigationList = document.querySelector('.navigation__list');
     const navigationItems = document.querySelectorAll('.navigation__item');
+    const navigationLinks = document.querySelectorAll('.navigation__link');
 
     const timeLine = gsap.timeline({ paused: true });
 
@@ -27,7 +28,13 @@ export const menuControl = () => {
         timeLine.reverse();
     }
 
-    
+    navigationLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            if (e.target.closest('.navigation__item')) {
+                closeMenu();
+            }
+        })
+    })
 
     
     navigationBtn.addEventListener('click', () => {

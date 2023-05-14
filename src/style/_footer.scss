@@ -44,6 +44,13 @@
     &__social-link {
         display: block;
         width: 36px;
+        color: $black;
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+        border-radius: 3px;
+        &:focus:not(:hover) {
+            outline-color: $white;
+        }
         @include lg {
             width: 50px;
         }
@@ -69,6 +76,17 @@
         }
         @include lg {
             font-size: 20px;
+        }
+        &-link {
+            outline: 2px solid transparent;
+            outline-offset: 2px;
+            border-radius: 3px;
+            &:focus:not(:hover) {
+                outline-color: $white;
+            }
+            &:hover {
+                color: $white;
+            }
         }
     }
     &__developer {
