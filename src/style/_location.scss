@@ -56,16 +56,16 @@
             display: block;
             bottom: 0;
             right: 50%;
-            height: 0.5px;
+            height: 1px;
             width: calc(100% - 32px);
             background-color: $white;
-            transform: translate(50%, 0.5px);
+            transform: translate(50%, 1px);
             @include lg {
                 bottom: 50%;
                 right: 0;
                 height: calc(100% - 186px);
-                width: 0.5px;
-                transform: translate(0.5px, 50%);
+                width: 1px;
+                transform: translate(1px, 50%);
             }
             @include xl {
                 height: calc(100% - 200px);
